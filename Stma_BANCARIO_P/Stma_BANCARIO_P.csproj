@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5B7E7214-AF83-4357-AD4E-82762F35D02F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Stma_BANCARIO_P</RootNamespace>
+    <AssemblyName>Stma_BANCARIO_P</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Capa_COORDINACION\clsCONTROLADOR.cs" />
+    <Compile Include="Capa_DOMINIO\clsAHORRADOR.cs" />
+    <Compile Include="Capa_DOMINIO\clsALCANCIA.cs" />
+    <Compile Include="Capa_DOMINIO\clsBANCO.cs" />
+    <Compile Include="Capa_DOMINIO\clsBILLETE.cs" />
+    <Compile Include="Capa_DOMINIO\clsBILLETERA.cs" />
+    <Compile Include="Capa_DOMINIO\clsBOVEDA.cs" />
+    <Compile Include="Capa_DOMINIO\clsCUENTA.cs" />
+    <Compile Include="Capa_DOMINIO\clsDINERO.cs" />
+    <Compile Include="Capa_DOMINIO\clsMONEDA.cs" />
+    <Compile Include="Capa_DOMINIO\clsOBJETO.cs" />
+    <Compile Include="Capa_DOMINIO\clsPERSONA.cs" />
+    <Compile Include="Capa_DOMINIO\clsTESORO.cs" />
+    <Compile Include="Capa_DOMINIO\clsTRANSACCION.cs" />
+    <Compile Include="Capa_DOMINIO\Program.cs" />
+    <Compile Include="Capa_SERVICIOS\clsSERVIDOR_CRUD_BILLETE.cs" />
+    <Compile Include="Capa_SERVICIOS\clsGESTOR_RECURSOS.cs" />
+    <Compile Include="Capa_SERVICIOS\clsSERVIDOR_ASOCIACIONES.cs" />
+    <Compile Include="Capa_SERVICIOS\clsSERVIDOR_CRUD.cs" />
+    <Compile Include="Capa_SERVICIOS\clsSERVIDOR_CRUD_AHORRADOR.cs" />
+    <Compile Include="Capa_SERVICIOS\clsSERVIDOR_CRUD_ALCANCIA.cs" />
+    <Compile Include="Capa_SERVICIOS\clsSERVIDOR_CRUD_BANCO.cs" />
+    <Compile Include="Capa_SERVICIOS\clsSERVIDOR_CRUD_BILLETERA.cs" />
+    <Compile Include="Capa_SERVICIOS\clsSERVIDOR_CRUD_BOVEDA.cs" />
+    <Compile Include="Capa_SERVICIOS\clsSERVIDOR_CRUD_DINERO.cs" />
+    <Compile Include="Capa_SERVICIOS\clsSERVIDOR_CRUD_MONEDA.cs" />
+    <Compile Include="Capa_SERVICIOS\clsSERVIDOR_CRUD_PERSONA.cs" />
+    <Compile Include="Capa_SERVICIOS\clsSERVIDOR_CRUD_TRANSACCION.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Capa_PRESENTACION\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
